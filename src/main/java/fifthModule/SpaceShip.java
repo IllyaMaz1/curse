@@ -28,4 +28,7 @@ public class SpaceShip {
         ship.setName("Voyager ".repeat(100));
         System.out.println(ship.getName()); //Should be Walker, too long value ignored
     }
+
+    /////Alex
+    
 }
