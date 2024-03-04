@@ -21,21 +21,29 @@ public class SpaceShip {
     }
 
     public void setSerialNumber(String serialNumber) {
-        char[] arr = serialNumber.toCharArray();
-        if (arr[0] == 'S' && arr[1] == 'N' && arr.length == 8) {
-            this.serialNumber = serialNumber;
+        if (serialNumber.length() != 8) {
+            return;
         }
+
+        if (!serialNumber.startsWith("SN")) {
+            return;
+        }
+
+        this.serialNumber = serialNumber;
     }
 
     //Test output
     public static void main(String[] args) {
         SpaceShip ship = new SpaceShip();
 
+        ship.setName("Voyager");
         ship.setSerialNumber("SN506788");
-        System.out.println(ship.getSerialNumber()); //Should be SN506788
 
-        ship.setSerialNumber("EE123456");
-        System.out.println(ship.getSerialNumber()); //Should be SN506788 - old value
+        //Name is Voyager, serial number is SN504030
+        ship.printInfo();
     }
 
+    public void printInfo() {
+        System.out.println("Name is " +  getName() + ", serial number is " + getSerialNumber());
+    }
 }
