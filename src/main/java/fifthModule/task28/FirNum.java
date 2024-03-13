@@ -1,0 +1,7 @@
+package fifthModule.task28;
+
+public class FirNum {
+    public int calc(int n) {
+        return n;
+    }
+}
