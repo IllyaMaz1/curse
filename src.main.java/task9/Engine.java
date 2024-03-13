@@ -26,7 +26,7 @@ class Engine {
 class XFuelEngine extends Engine {
     protected String serialNumber;
     
-    public String getFuelType() {
+    public String setFuelType() {
         return "XFuel";
     }
     public void setSerialNumber(String serialNumber) {
